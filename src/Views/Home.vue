@@ -15,57 +15,6 @@
         class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/60 to-transparent"
       ></div>
 
-      <!-- <div class="relative z-10 text-center p-4 max-w-4xl mx-auto">
-        <h1
-          class="text-4xl md:text-6xl font-extrabold tracking-tight drop-shadow-lg animate-fade-in-down whitespace-nowrap"
-        >
-          <span v-if="user.isLoggedIn" class="text-white">
-            Chào mừng {{ user.username }}
-          </span>
-          <span v-else class="text-white">
-            Khám Phá Tri Thức Không Giới Hạn
-          </span>
-        </h1>
-
-        <p
-          class="mt-6 text-lg md:text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto animate-fade-in-up delay-200"
-        >
-          Mỗi trang sách mở ra một thế giới mới — chỉ cần bạn sẵn sàng bước vào.
-        </p>
-
-        <div class="mt-10 max-w-xl mx-auto animate-fade-in-up delay-200">
-          <form
-            @submit.prevent="handleSearch"
-            class="flex items-center bg-white rounded-full shadow-2xl p-2 group"
-          >
-            <input
-              v-model="searchQuery"
-              type="text"
-              placeholder="Tìm kiếm sách, tác giả, thể loại..."
-              class="w-full bg-transparent px-5 py-3 text-gray-800 placeholder-gray-500 focus:outline-none text-lg"
-            />
-            <button
-              type="submit"
-              class="bg-gray-800 text-white rounded-full p-4 hover:bg-gray-700 transition-all duration-300 transform group-hover:scale-105 active:scale-95 shadow-lg flex items-center justify-center"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="w-7 h-7"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                />
-              </svg>
-            </button>
-          </form>
-        </div>
-      </div> -->
       <div class="relative z-10 text-center p-4 max-w-4xl mx-auto">
         <!-- Căn giữa tuyệt đối cho H1 -->
         <div class="w-full flex justify-center">
@@ -151,28 +100,6 @@
       <div v-else class="text-center text-gray-500 text-xl py-10">
         <p>Đang tải những cuốn sách nổi bật nhất...</p>
       </div>
-      <!-- <div class="mt-16 text-center">
-        <router-link
-          to="/books"
-          class="inline-flex items-center bg-gray-800 text-white px-10 py-4 rounded-full font-semibold text-lg hover:bg-gray-700 transition-all duration-300 shadow-xl transform hover:-translate-y-1 animate-bounce-subtle"
-        >
-          Xem Tất Cả Sách
-          <svg
-            class="ml-3 w-5 h-5"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M17 8l4 4m0 0l-4 4m4-4H3"
-            ></path>
-          </svg>
-        </router-link>
-      </div> -->
     </section>
 
     <section
@@ -203,101 +130,6 @@
       </div>
     </section>
 
-    <!-- <section
-      ref="aboutSection1"
-      class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 py-20 flex flex-col md:flex-row items-center gap-12 bg-white rounded-xl shadow-lg mt-16 transform transition-all duration-700 ease-out hover:-translate-y-2"
-      :class="{
-        'opacity-0 -translate-x-10': !isAboutSection1Visible,
-        'opacity-100 translate-x-0': isAboutSection1Visible,
-      }"
-    >
-      <div class="md:w-1/2 flex justify-center">
-        <img
-          src="https://img.tripi.vn/cdn-cgi/image/width=700,height=700/https://gcs.tripi.vn/public-tripi/tripi-feed/img/482783xxD/anh-mo-ta.png"
-          alt="Thư viện hiện đại"
-          class="rounded-xl shadow-2xl w-full max-w-md h-auto object-cover transform transition-transform duration-500 hover:scale-105"
-        />
-      </div>
-      <div class="md:w-1/2 text-center md:text-left">
-        <h3 class="text-3xl font-extrabold text-gray-900 mb-6">
-          Khám Phá Kho Tàng Tri Thức
-        </h3>
-        <p class="text-lg text-gray-700 leading-relaxed mb-8 text-justify">
-          Hàng ngàn cuốn sách đa dạng đang chờ bạn khám phá, mở ra những góc
-          nhìn mới và kiến thức mới mẻ. Từ những trang tiểu thuyết đầy cảm xúc
-          đến sách khoa học, lịch sử hay phát triển bản thân, nơi đây luôn có
-          điều gì đó để bạn tìm thấy và yêu thích.
-        </p>
-        <router-link
-          to="/books"
-          class="inline-flex items-center bg-gray-800 text-white px-8 py-3 rounded-full font-semibold hover:bg-gray-900 transition-all duration-300 shadow-md"
-        >
-          Xem Kho Sách
-          <svg
-            class="ml-2 w-4 h-4"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M9 5l7 7-7 7"
-            ></path>
-          </svg>
-        </router-link>
-      </div>
-    </section>
-
-    <section
-      ref="aboutSection2"
-      class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 py-20 flex flex-col md:flex-row-reverse items-center gap-12 bg-white rounded-xl shadow-lg mt-16 transform transition-all duration-700 ease-out hover:-translate-y-2"
-      :class="{
-        'opacity-0 translate-x-10': !isAboutSection2Visible,
-        'opacity-100 translate-x-0': isAboutSection2Visible,
-      }"
-    >
-      <div class="md:w-1/2 flex justify-center">
-        <img
-          src="https://img.tripi.vn/cdn-cgi/image/width=700,height=700/https://gcs.tripi.vn/public-tripi/tripi-feed/img/482783qFG/anh-mo-ta.png"
-          alt="Người đọc sách trên thiết bị di động"
-          class="rounded-xl shadow-2xl w-full max-w-md h-auto object-cover transform transition-transform duration-500 hover:scale-105"
-        />
-      </div>
-      <div class="md:w-1/2 text-center md:text-left">
-        <h3 class="text-3xl font-extrabold text-gray-900 mb-6">
-          Đọc Sách Không Giới Hạn
-        </h3>
-        <p class="text-lg text-gray-700 leading-relaxed mb-8 text-justify">
-          Hãy tạo tài khoản ngay để mở khóa trải nghiệm đọc sách linh hoạt trên
-          mọi thiết bị. Giao diện trực quan cùng khả năng đồng bộ giúp bạn tiếp
-          tục hành trình tri thức của mình bất cứ lúc nào — ở nhà, trên đường
-          hay bất kỳ nơi đâu bạn muốn.
-        </p>
-        <router-link
-          to="/auth/register"
-          class="inline-flex items-center bg-gray-800 text-white px-8 py-3 rounded-full font-semibold hover:bg-gray-700 transition-all duration-300 shadow-md"
-        >
-          Đăng Ký Tài Khoản
-          <svg
-            class="ml-2 w-4 h-4"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM12 14c-1.478 0-2.923.473-4.204 1.334L4 18l1.397-2.794C6.205 14.887 7.55 14 9 14h6c1.45 0 2.795.887 3.603 2.206L20 18l-3.796-2.666C14.923 14.473 13.478 14 12 14z"
-            ></path>
-          </svg>
-        </router-link>
-      </div>
-    </section> -->
     <section
       ref="aboutSection1"
       class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 py-20 flex flex-col md:flex-row items-center gap-12 bg-white/30 backdrop-blur-md shadow-xl border border-white/20 rounded-2xl mt-20 transform transition-all duration-700 ease-out hover:-translate-y-2"
