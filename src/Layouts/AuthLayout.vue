@@ -1,0 +1,54 @@
+<template>
+  <div
+    class="min-h-screen flex items-center justify-center bg-gray-50 p-4 sm:p-6 lg:p-8"
+  >
+    <div
+      class="relative z-10 flex flex-col lg:flex-row bg-white rounded-3xl shadow-2xl overflow-hidden max-w-7xl w-full"
+    >
+      <div
+        class="relative lg:w-1/2 min-h-[300px] lg:min-h-[600px] bg-cover bg-center transition-all duration-500 transform hover:scale-105"
+        :style="{
+          backgroundImage:
+            'url(\'https://img.lovepik.com/photo/60239/6109.jpg_wh860.jpg\')',
+        }"
+      >
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-75"
+        ></div>
+        <div
+          class="absolute inset-0 flex flex-col items-center justify-center p-8 text-white text-center"
+        >
+          <h2
+            class="text-4xl sm:text-5xl font-extrabold mb-4 leading-tight drop-shadow-lg"
+          >
+            Khơi Mở Tri Thức
+          </h2>
+          <p class="text-lg sm:text-xl font-light opacity-90 drop-shadow-md">
+            Khám phá, trải nghiệm và phát triển mỗi ngày.
+          </p>
+        </div>
+      </div>
+
+      <div class="lg:w-1/2 p-8 sm:p-12 flex flex-col justify-center bg-white">
+        <div class="mb-8 text-center">
+          <router-link
+            to="/"
+            class="font-extrabold text-4xl sm:text-5xl tracking-tight text-gray-900 hover:text-gray-700 transition-colors duration-200"
+          >
+            THƯ VIỆN TRỰC TUYẾN
+          </router-link>
+        </div>
+
+        <router-view />
+      </div>
+    </div>
+  </div>
+</template>
+
+<script setup>
+// Không cần import gì nếu chỉ dùng router-view
+</script>
+
+<style scoped>
+/* Tailwind CSS được sử dụng trực tiếp trong template.*/
+</style>
